@@ -4,3 +4,7 @@ header {
 header nav {
   display: flex;
 }
+header nav h1 {
+  margin: 0;
+  padding: 0;
+}
