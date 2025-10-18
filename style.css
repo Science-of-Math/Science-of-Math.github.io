@@ -24,12 +24,12 @@ main {
   padding: 0;
 }
 svg {
-  width: 100%;
 }
 svg circle,
 svg line,
 svg polygon,
-svg polyline {
+svg polyline,
+svg path {
   fill: none;
   stroke: black;
   stroke-width: 0.002;
@@ -40,6 +40,8 @@ svg circle.dot {
 }
 svg text {
   fill: black;
+  font-size: 0.05;
+  font-family: sans;
 }
 footer {
   position: absolute;
