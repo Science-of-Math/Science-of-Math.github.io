@@ -1,0 +1,76 @@
+body {
+  margin: 0px; }
+
+a {
+  color: rgba(0, 0, 0, 0.7); }
+  a:focus, a:hover {
+    color: rgba(0, 0, 0, 0.6); }
+
+header {
+  display: block;
+  padding: 0 8px; }
+  header nav {
+    display: flex; }
+    header nav h1 {
+      margin: 0;
+      padding: 0 8px; }
+    header nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0; }
+      header nav ul li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none; }
+        header nav ul li a:hover {
+          background-color: #555555;
+          color: white; }
+
+main {
+  padding: 0 20px; }
+  main.fill {
+    position: absolute;
+    top: 37px;
+    bottom: 20px;
+    right: 0;
+    left: 0;
+    display: block;
+    padding: 0; }
+
+svg.float-right {
+  float: right;
+  width: 70%; }
+
+svg .hidden {
+  fill: none;
+  stroke: none; }
+
+svg .highlight {
+  fill: none;
+  stroke: yellow;
+  stroke-width: 0.02px; }
+
+svg circle,
+svg line,
+svg polygon,
+svg polyline,
+svg path {
+  fill: none;
+  stroke: black;
+  stroke-width: 0.002px; }
+
+svg circle.dot {
+  fill: red;
+  stroke: none; }
+
+svg text {
+  fill: black;
+  font-size: 0.05px;
+  font-family: sans; }
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: block;
+  padding: 0 8px; }
