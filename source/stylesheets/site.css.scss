@@ -1,6 +1,7 @@
 
 html {
 }
+
 body {
   margin: 0px;
 }
@@ -21,7 +22,22 @@ header {
     display: flex;
     h1 {
       margin: 0;
+      padding: 0 8px;
+    }
+    ul {
+      list-style-type: none;
+      margin: 0;
       padding: 0;
+      li a {
+        display: block;
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        &:hover {
+          background-color: #555555;
+          color: white;
+        }
+      }
     }
   }
 }
