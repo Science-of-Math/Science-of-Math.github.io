@@ -1,8 +1,13 @@
 <header>
   <nav>
-    <h1>The Science of Math</h1>
     <ul>
+      <li class="title"><%= link_to 'The Science of Math', '/' %></li>
       <li><%= link_to 'Euclid', '/euclid/' %></li>
     </ul>
+  </nav>
+  <nav>
+    <a class="skool" href="https://www.skool.com/userhackable-4785/about?ref=81bcf855120743ee8653433b0ef0deb4">
+      <%= partial 'skool.svg' %>
+    </a>
   </nav>
 </header>

@@ -1,18 +1,43 @@
 ---
-title: The Science of Math
+title: Science of Math
 ---
 
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="-1.02 -1.02 3.04 2.04" maintainAspectRatio="meet" transform="scale(1,-1)" >
-  <circle id="A" class="dot" r="0.02" cx="0" cy="0" />
-  <circle id="B" class="dot" r="0.02" cx="1" cy="0" />
-  <circle id="C" class="dot" r="0.02" cx="0.5" cy="0.8660254037844386" />
-  <line id="AB" x1="0" y1="0" x2="1" y2="0" />
-  <circle cx="0" cy="0" r="1" />
-  <circle cx="1" cy="0" r="1" />
-  <line id="AC" x1="0" y1="0" x2="0.5" y2="0.8660254037844386" />
-  <line id="BC" x1="1" y1="0" x2="0.5" y2="0.8660254037844386" />
-  <text x="0" y="0" text-anchor="end" transform="scale(1,-1) translate(-0.03, 0.02)">A</text>
-  <text x="1" y="0" text-anchor="start" transform="scale(1,-1) translate(0.03, 0.02)">B</text>
-  <text x="0.5" y="-0.86602540378443860" text-anchor="middle" transform="scale(1,-1) translate(0.0, -0.03)">C</text>
+<svg class="scale" xmlns="http://www.w3.org/2000/svg" viewBox="-1050 -300 2100 600" maintainAspectRatio="meet" >
+  <defs>
+    <marker id="arrow" markerWidth="20" markerHeight="10" refX="20" refY="5" orient="auto">
+      <path d="M 0 0 L 20 5 L 0 10 z" />
+    </marker>
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="7" stdDeviation="5" flood-opacity="0.7"/>
+    </filter>
+  </defs>
+  <circle cx="0" cy="0" r="200" fill="none" />
+  <line x1="0" y1="-300" x2="0" y2="-200" marker-end="url(#arrow)" />
+  <g id="pointer" transform="rotate(-4)" >
+    <line x1="0" y1="0" x2="0" y2="-200" marker-end="url(#arrow)" />
+    <line x1="-500" y1="0" x2="500" y2="0" />
+  </g>
+  <g id="left-pan" transform="translate(0 20)" >
+    <line x1="-1050" y1="100" x2="0" y2="100" />
+    <polygon points="-1000,200 -900,-200 -50,-200 -70,200" fill="#ff0" filter="url(#shadow)" />
+  </g>
+
+  <rect id="shield" x="-1050" y="-300" width="1010" height="600" fill="black" opacity="0.05"/>
+
+  <g id="right-pan" transform="translate(0 -20)" >
+    <line x1="1050" y1="100" x2="0" y2="100" />
+    <polygon points="1000,200 900,-200 50,-200 70,200" fill="#0f0" filter="url(#shadow)" />
+  </g>
+
+  <g class="weight" >
+    <circle cx="200" cy="0" r="40" fill="#f99" filter="url(#shadow)" />
+    <text x="200" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >g</text>
+  </g>
+
+  <g class="weight" >
+    <circle class="weight" cx="300" cy="0" r="50" fill="#99f" filter="url(#shadow)" />
+    <text x="300" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >h</text>
+  </g>
+
 </svg>
 

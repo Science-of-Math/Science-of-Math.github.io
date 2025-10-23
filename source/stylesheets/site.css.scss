@@ -16,26 +16,48 @@ a {
 }
 
 header {
-  display: block;
+  display: flex;
+  justify-content: space-between;
   padding: 0 8px;
+  font-weight: bold;
+  font-family: sans;
+  height: 37px;
+
   nav {
     display: flex;
     h1 {
       margin: 0;
       padding: 0 8px;
     }
+    a {
+      display: block;
+      color: black;
+      padding: 3px 16px;
+      text-decoration: none;
+      &:hover {
+        color: #009;
+        background-color: #eee;
+      }
+      &.skool {
+        padding: 8px 10px;
+      }
+    }
+
     ul {
+      display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0;
-      li a {
-        display: block;
-        color: black;
-        padding: 8px 16px;
-        text-decoration: none;
-        &:hover {
-          background-color: #555555;
-          color: white;
+      li {
+        font-size: 22px;
+        &.title {
+          font-size: 26px;
+          a {
+            padding: 0px 16px 0px 0px;
+          }
+        }
+        a {
+          padding: 3px 16px;
         }
       }
     }
@@ -69,26 +91,50 @@ svg {
     stroke: yellow;
     stroke-width: 0.02px;
   }
-
-  circle,
-  line,
-  polygon,
-  polyline,
-  path {
-    fill: none;
-    stroke: black;
-    stroke-width: 0.002px;
-  }
-
-  circle.dot {
-    fill: red;
-    stroke: none;
-  }
-
-  text {
-    fill: black;
-    font-size: 0.05px;
+  &.scale {
     font-family: sans;
+    border: solid 1px black;
+    circle,
+    line,
+    polygon,
+    polyline,
+    path {
+      stroke: black;
+      stroke-width: 1px;
+    }
+    #left-pan {
+    }
+    #right-pan {
+    }
+    #pointer {
+      fill: black;
+    }
+    #arrow {
+      stroke: none;
+      fill: black;
+    }
+  }
+  &.greek {
+    circle,
+    line,
+    polygon,
+    polyline,
+    path {
+      fill: none;
+      stroke: black;
+      stroke-width: 0.002px;
+    }
+
+    circle.dot {
+      fill: red;
+      stroke: none;
+    }
+
+    text {
+      fill: black;
+      font-size: 0.05px;
+      font-family: sans;
+    }
   }
 }
 
