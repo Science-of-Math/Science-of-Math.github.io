@@ -7,25 +7,40 @@ a {
     color: rgba(0, 0, 0, 0.6); }
 
 header {
-  display: block;
-  padding: 0 8px; }
+  display: flex;
+  justify-content: space-between;
+  padding: 0 8px;
+  font-weight: bold;
+  font-family: sans;
+  height: 37px; }
   header nav {
     display: flex; }
     header nav h1 {
       margin: 0;
       padding: 0 8px; }
+    header nav a {
+      display: block;
+      color: black;
+      padding: 3px 16px;
+      text-decoration: none; }
+      header nav a:hover {
+        color: #009;
+        background-color: #eee; }
+      header nav a.skool {
+        padding: 8px 10px; }
     header nav ul {
+      display: flex;
       list-style-type: none;
       margin: 0;
       padding: 0; }
-      header nav ul li a {
-        display: block;
-        color: black;
-        padding: 8px 16px;
-        text-decoration: none; }
-        header nav ul li a:hover {
-          background-color: #555555;
-          color: white; }
+      header nav ul li {
+        font-size: 22px; }
+        header nav ul li.title {
+          font-size: 26px; }
+          header nav ul li.title a {
+            padding: 0px 16px 0px 0px; }
+        header nav ul li a {
+          padding: 3px 16px; }
 
 main {
   padding: 0 20px; }
@@ -51,20 +66,36 @@ svg .highlight {
   stroke: yellow;
   stroke-width: 0.02px; }
 
-svg circle,
-svg line,
-svg polygon,
-svg polyline,
-svg path {
+svg.scale {
+  font-family: sans;
+  border: solid 1px black; }
+  svg.scale circle,
+  svg.scale line,
+  svg.scale polygon,
+  svg.scale polyline,
+  svg.scale path {
+    stroke: black;
+    stroke-width: 1px; }
+  svg.scale #pointer {
+    fill: black; }
+  svg.scale #arrow {
+    stroke: none;
+    fill: black; }
+
+svg.greek circle,
+svg.greek line,
+svg.greek polygon,
+svg.greek polyline,
+svg.greek path {
   fill: none;
   stroke: black;
   stroke-width: 0.002px; }
 
-svg circle.dot {
+svg.greek circle.dot {
   fill: red;
   stroke: none; }
 
-svg text {
+svg.greek text {
   fill: black;
   font-size: 0.05px;
   font-family: sans; }
