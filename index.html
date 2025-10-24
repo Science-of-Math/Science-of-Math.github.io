@@ -8,9 +8,10 @@
     <!-- Use the title from a page's frontmatter if it has one -->
     <title>Science of Math</title>
     <link href="/stylesheets/site.css" rel="stylesheet" />
-    
-    <script src="/javascripts/site.js"></script>
-    
+    <link href="/stylesheets/index.css" rel="stylesheet" />
+    <script src="/javascripts/turbo.es2017-esm.js" type="module"></script>
+    <script src="/javascripts/site.js" type="module"></script>
+    <script src="/javascripts/index.js"></script>
   </head>
   <body>
     <header>
@@ -35,7 +36,7 @@
 </header>
 
     <main>
-      <svg class="scale" xmlns="http://www.w3.org/2000/svg" viewBox="-1050 -300 2100 600" maintainAspectRatio="meet" >
+      <svg class="scale" xmlns="http://www.w3.org/2000/svg" viewBox="-1010 -300 2020 600" maintainAspectRatio="meet" data-controller="scale" data-action="mousemove->scale#move">
   <defs>
     <marker id="arrow" markerWidth="20" markerHeight="10" refX="20" refY="5" orient="auto">
       <path d="M 0 0 L 20 5 L 0 10 z" />
@@ -44,32 +45,33 @@
       <feDropShadow dx="0" dy="7" stdDeviation="5" flood-opacity="0.7"/>
     </filter>
   </defs>
-  <circle cx="0" cy="0" r="200" fill="none" />
-  <line x1="0" y1="-300" x2="0" y2="-200" marker-end="url(#arrow)" />
-  <g id="pointer" transform="rotate(-4)" >
-    <line x1="0" y1="0" x2="0" y2="-200" marker-end="url(#arrow)" />
-    <line x1="-500" y1="0" x2="500" y2="0" />
+  <circle cx="0" cy="0" r="200" fill="none" stroke="black" stroke-width="1" />
+  <line x1="0" y1="-300" x2="0" y2="-200"  stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+  <g id="pointer" data-scale-target="pointer" transform="rotate(-4)" >
+    <line x1="0" y1="0" x2="0" y2="-200"  stroke="black" stroke-width="1" marker-end="url(#arrow)" />
+    <line x1="-500" y1="0" x2="500" y2="0"  stroke="black" stroke-width="1" />
   </g>
-  <g id="left-pan" transform="translate(0 20)" >
-    <line x1="-1050" y1="100" x2="0" y2="100" />
-    <polygon points="-1000,200 -900,-200 -50,-200 -70,200" fill="#ff0" filter="url(#shadow)" />
-  </g>
-
-  <rect id="shield" x="-1050" y="-300" width="1010" height="600" fill="black" opacity="0.05"/>
-
-  <g id="right-pan" transform="translate(0 -20)" >
-    <line x1="1050" y1="100" x2="0" y2="100" />
-    <polygon points="1000,200 900,-200 50,-200 70,200" fill="#0f0" filter="url(#shadow)" />
+  <g id="left-pan" data-scale-target="left" transform="translate(0 20)" >
+    <line x1="-1050" y1="100" x2="0" y2="100"  stroke="black" stroke-width="1" />
+    <polygon points="-1000,200 -900,-200 -50,-200 -70,200"  stroke="black" stroke-width="1" fill="#ff0" filter="url(#shadow)" />
   </g>
 
-  <g class="weight" >
-    <circle cx="200" cy="0" r="40" fill="#f99" filter="url(#shadow)" />
-    <text x="200" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >g</text>
-  </g>
+  <rect id="shield" x="-1010" y="-300" width="970" height="600" fill="black" opacity="0.05"/>
 
-  <g class="weight" >
-    <circle class="weight" cx="300" cy="0" r="50" fill="#99f" filter="url(#shadow)" />
-    <text x="300" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >h</text>
+  <g id="right-pan" data-scale-target="right" transform="translate(0 -20)" >
+    <line x1="1050" y1="100" x2="0" y2="100"  stroke="black" stroke-width="1" />
+    <polygon points="1000,200 900,-200 50,-200 70,200"  stroke="black" stroke-width="1" fill="#0f0" filter="url(#shadow)" />
+
+    <g class="weight" >
+      <circle cx="200" cy="0" r="40"  stroke="black" stroke-width="1" fill="#f99" filter="url(#shadow)" />
+      <text x="200" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >g</text>
+    </g>
+
+    <g class="weight" data-controller="hello" >
+      <circle class="weight" cx="300" cy="0" r="50"  stroke="black" stroke-width="1" fill="#99f" filter="url(#shadow)" />
+      <text x="300" y="0" fill="black" font-size="40" text-anchor="middle" dominant-baseline="central" >h</text>
+    </g>
+
   </g>
 
 </svg>

@@ -69,13 +69,6 @@ svg .highlight {
 svg.scale {
   font-family: sans;
   border: solid 1px black; }
-  svg.scale circle,
-  svg.scale line,
-  svg.scale polygon,
-  svg.scale polyline,
-  svg.scale path {
-    stroke: black;
-    stroke-width: 1px; }
   svg.scale #pointer {
     fill: black; }
   svg.scale #arrow {
