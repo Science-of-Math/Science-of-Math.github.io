@@ -9,7 +9,8 @@
     <title><%= current_page.data.title || "The Science of Math" %></title>
     <%= stylesheet_link_tag "site" %>
     <%= auto_stylesheet_link_tag %>
-    <%= javascript_include_tag "site" %>
+    <%= javascript_include_tag "turbo.es2017-esm", type: "module" %>
+    <%= javascript_include_tag "site", type: "module" %>
     <%= auto_javascript_include_tag %>
   </head>
   <body>

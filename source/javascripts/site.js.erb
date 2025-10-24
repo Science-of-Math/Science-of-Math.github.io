@@ -1,0 +1,10 @@
+// site.js.erb
+import { Application } from "./stimulus.js"
+window.Stimulus = Application.start()
+
+<% controllers = Pathname.new(__FILE__).dirname.glob("*_controller.js").map(&:basename) %>
+<% controllers.each do |file| %>
+import <%= name = file.sub(/.js/,'') %> from "./<%= file %>";
+Stimulus.register("<%= name.sub(/_controller/,'') %>", <%= name %>);
+<% end %>
+

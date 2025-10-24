@@ -94,14 +94,6 @@ svg {
   &.scale {
     font-family: sans;
     border: solid 1px black;
-    circle,
-    line,
-    polygon,
-    polyline,
-    path {
-      stroke: black;
-      stroke-width: 1px;
-    }
     #left-pan {
     }
     #right-pan {
